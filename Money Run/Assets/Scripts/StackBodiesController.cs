@@ -11,7 +11,7 @@ public class StackBodiesController : MonoBehaviour
         stackBodies = GetComponentsInChildren<Stack>();
         foreach (Stack item in stackBodies)
         {
-            if (item.gameObject.activeSelf==true)
+            if (item.gameObject.activeSelf == true)
             {
                 item.gameObject.SetActive(false);
             }
@@ -25,13 +25,13 @@ public class StackBodiesController : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public Stack[] Bodies()
@@ -48,10 +48,10 @@ public class StackBodiesController : MonoBehaviour
 
         stackBodies[stackIndex].activeCollider = true;
 
-        
+
 
 
         Debug.Log("Current stack index is " + (stackIndex));
     }
-    
+
 }
