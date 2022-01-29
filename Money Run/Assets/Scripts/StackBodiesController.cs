@@ -4,24 +4,46 @@ using UnityEngine;
 
 public class StackBodiesController : MonoBehaviour
 {
-    public Stack[] stackBodies;
-    public int stackIndex = 0;
+    public Stack[] stackColliders;
+    public StackedCash[] stackedCash;
+
+
+   // public Stack[] activeStacks;
+  //  public StackedCash[] stackedCashes;
+
+
+    public int stackCount = 0;
     private void Awake()
     {
-        stackBodies = GetComponentsInChildren<Stack>();
-        foreach (Stack item in stackBodies)
+        stackColliders = GetComponentsInChildren<Stack>();
+
+        int loopCount = 0;
+        foreach (Stack item in stackColliders)
         {
             if (item.gameObject.activeSelf == true)
             {
                 item.gameObject.SetActive(false);
+                item.myIndex = loopCount;
+                loopCount++;
             }
         }
+        stackColliders[0].gameObject.SetActive(true);
 
-        stackBodies[0].gameObject.SetActive(true);
+        stackColliders[0].activeCollider = true;
 
-        stackBodies[0].activeCollider = true;
+        stackedCash = GetComponentsInChildren<StackedCash>();
+        int loopCountForCash = 0;
+        foreach (StackedCash item in stackedCash)
+        {
 
-        Debug.Log("Current stack index is " + (stackIndex));
+            item.DisableMeshRenderer();
+            item.myIndex = loopCountForCash;
+            loopCountForCash++;
+
+        }
+        
+
+        Debug.Log("Current stack count is " + (stackCount));
     }
     void Start()
     {
@@ -34,24 +56,72 @@ public class StackBodiesController : MonoBehaviour
 
     }
 
-    public Stack[] Bodies()
+    void GetNextColliderActive()
     {
-        return stackBodies;
+
+       // stackColliders[stackCount].myIndex = stackCount;
+        stackCount++;
+
+        if (stackColliders.Length>stackCount)
+        {
+            stackColliders[stackCount].ActiveCollider();
+
+
+        }
+
+        Debug.Log("Current stack count is " + (stackCount));
+    }
+
+     void GetCashMeshActive()
+    {
+        stackColliders[stackCount].isStacked = true;
+       // stackedCashes[stackIndex]=(stackedCash[stackIndex]);
+       // stackedCash[stackCount].myIndex = stackCount;
+        stackedCash[stackCount].EnableMeshRenderer();
+    }
+
+    public void ActiveTheStack()
+    {
+
+        GetCashMeshActive();
+        GetNextColliderActive();
+        
+        
     }
 
 
-    public void GetNextOneActive()
+    public void DestroyStacks(int index)
     {
-        stackIndex++;
+        int forLoopCounter = 0;
+        for (int i = index; i <= stackCount; i++)
+        {
+            if (i==stackCount)
+            {
+                stackColliders[i].isStacked = false;
+                stackedCash[i].DetachCash();
+                
+            }
+            else
+            {
 
-        stackBodies[stackIndex].gameObject.SetActive(true);
+                stackColliders[i].isStacked = false;
+                stackColliders[i + 1].DeactiveCollider();
+                stackedCash[i].DetachCash();
+                Debug.Log("Cash number  " + i + " is detached.");
 
-        stackBodies[stackIndex].activeCollider = true;
+                forLoopCounter++;
+            }
 
+        }
 
+        stackCount -= forLoopCounter;
+        if (stackCount<0)
+        {
+            stackCount = 0;
+        }
+        Debug.Log("After detaching, last stack count is " + stackCount + ". ");
 
-
-        Debug.Log("Current stack index is " + (stackIndex));
     }
+
 
 }
