@@ -48,18 +48,21 @@ public class Stack : MonoBehaviour
     {
         if (other.gameObject.tag=="Cash")
         {
-            this.transform.localScale = new Vector3(1, 0.5f, 0.5f);
+            this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
             Destroy(other.gameObject);
             sbc.ActiveTheStack();
              
         }
         else if (other.gameObject.tag == "SlidingObstacle")
         {
+            SliderMovement thisSm=other.gameObject.GetComponent<SliderMovement>();
 
             Debug.Log("Stack " + myIndex + " has been hit.");
             if (this.isStacked == true)
             {
-                sbc.DestroyStacks(this.myIndex);
+                Vector2 upperLeftCorner = thisSm.upperLeftCorner;
+                Vector2 downRightCorner = thisSm.downRightCorner;
+                sbc.DestroyStacks(this.myIndex,upperLeftCorner,downRightCorner);
             }
             
 

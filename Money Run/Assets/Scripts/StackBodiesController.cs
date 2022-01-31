@@ -7,7 +7,7 @@ public class StackBodiesController : MonoBehaviour
     public Stack[] stackColliders;
     public StackedCash[] stackedCash;
 
-
+    
    // public Stack[] activeStacks;
   //  public StackedCash[] stackedCashes;
 
@@ -90,8 +90,10 @@ public class StackBodiesController : MonoBehaviour
     }
 
 
-    public void DestroyStacks(int index)
+    public void DestroyStacks(int index,Vector2 upperLeftCorner,Vector2 downRightCorner)
     {
+
+        Debug.Log("Destack bounds are ");
         int forLoopCounter = 0;
         for (int i = index; i <= stackCount; i++)
         {
@@ -106,7 +108,7 @@ public class StackBodiesController : MonoBehaviour
 
                 stackColliders[i].isStacked = false;
                 stackColliders[i + 1].DeactiveCollider();
-                stackedCash[i].DetachCash();
+                stackedCash[i].DetachCash(upperLeftCorner, downRightCorner);
                 Debug.Log("Cash number  " + i + " is detached.");
 
                 forLoopCounter++;

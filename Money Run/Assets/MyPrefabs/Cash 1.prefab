@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 8518711233875504567}
   - component: {fileID: 5406919194101880500}
   - component: {fileID: 7585614405297340218}
-  - component: {fileID: -2247086221941475057}
   m_Layer: 0
-  m_Name: Cash
-  m_TagString: Untagged
+  m_Name: Cash 1
+  m_TagString: Cash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8872040069210409804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.3845755, y: 0.79999995, z: -28.10255}
   m_LocalScale: {x: 1, y: 0.3, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,21 +95,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2247086221941475057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8872040069210409804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7e4cd6624dabe845a2c4b2222f423b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMeshActive: 1
-  myIndex: 0
-  banknote: {fileID: 8872040069210409804, guid: aec76445e03e86f4fb2ab3a7a69c5a83, type: 3}
-  secondsToWait: 1
-  jumpPower: 2
-  jumpDuration: 0.5
