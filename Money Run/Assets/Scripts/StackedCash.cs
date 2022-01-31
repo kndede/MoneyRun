@@ -58,20 +58,13 @@ public class StackedCash : MonoBehaviour
         float rndZ = Random.Range(minz, maxz);
         float rndX = Random.Range(x, -x);
 
-        GameObject newObject= Instantiate(banknote, transform.position, Quaternion.identity);
+        GameObject newObject = Instantiate(banknote, transform.position, Quaternion.identity);
 
-        newObject.transform.DOJump(new Vector3(rndX,0.8f,rndZ),jumpPower,1,jumpDuration);
+        newObject.transform.DOJump(new Vector3(rndX, 0.8f, rndZ), jumpPower, 1, jumpDuration).OnComplete(() => newObject.tag="Cash");
 
-
-        StartCoroutine(CashTagger(newObject));
     }
 
-    IEnumerator CashTagger(GameObject go)
-    {
-        
-        yield return new WaitForSeconds(secondsToWait);
-        go.tag = "Cash";
-    }
+   
     
 
 

@@ -111,6 +111,6 @@ MonoBehaviour:
   isMeshActive: 1
   myIndex: 0
   banknote: {fileID: 8872040069210409804, guid: aec76445e03e86f4fb2ab3a7a69c5a83, type: 3}
-  secondsToWait: 1
+  secondsToWait: 0.5
   jumpPower: 2
   jumpDuration: 0.5
