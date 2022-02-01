@@ -8,8 +8,8 @@ using DG.Tweening;
 public class TriviaTrigger : MonoBehaviour
 {
     public TextMeshProUGUI question;
-    public GameObject leftPanel;
-    public GameObject rightPanel;
+  //  public GameObject leftPanel;
+  //  public GameObject rightPanel;
 
 
     private Collider myCol;
@@ -23,8 +23,8 @@ public class TriviaTrigger : MonoBehaviour
         if (triggerCount==0)
         {
             question.gameObject.SetActive(true);
-            leftPanel.SetActive(true);
-            rightPanel.SetActive(true);
+         //   leftPanel.SetActive(true);
+          //  rightPanel.SetActive(true);
 
             Destroy(this.gameObject);
            
