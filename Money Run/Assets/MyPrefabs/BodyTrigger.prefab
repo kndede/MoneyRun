@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7085243674367227762}
   m_Layer: 0
   m_Name: BodyTrigger
-  m_TagString: Untagged
+  m_TagString: StackTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,11 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334ecb00bf213004baf1947a989fb924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashBody: {fileID: 0}
-  cashBodies: []
   activeCollider: 0
   isStacked: 0
-  cashMr: {fileID: 0}
+  myIndex: 0
+  thisCash: {fileID: 0}
 --- !u!54 &7085243674367227762
 Rigidbody:
   m_ObjectHideFlags: 0

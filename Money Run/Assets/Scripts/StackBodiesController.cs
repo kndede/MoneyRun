@@ -45,16 +45,7 @@ public class StackBodiesController : MonoBehaviour
 
         Debug.Log("Current stack count is " + (stackCount));
     }
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 
     void GetNextColliderActive()
     {
@@ -125,5 +116,13 @@ public class StackBodiesController : MonoBehaviour
 
     }
 
+    public void CollectCash(int cashIndex)
+    {
+        stackColliders[cashIndex].isStacked = false;
+        stackColliders[cashIndex+1].DeactiveCollider();
+        stackedCash[cashIndex].DetachCash();
+        stackCount--;
+        Debug.Log("Cash number  " + cashIndex + " is detached and added to the bet");
+    }
 
 }
