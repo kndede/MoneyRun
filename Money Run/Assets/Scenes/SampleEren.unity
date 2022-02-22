@@ -3568,6 +3568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969d9b779b442e24e928742dc5ef681a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectedCash: []
 --- !u!1 &1562328019
 GameObject:
   m_ObjectHideFlags: 0

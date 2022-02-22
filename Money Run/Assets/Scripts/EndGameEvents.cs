@@ -30,7 +30,7 @@ public class EndGameEvents : MonoBehaviour
 
     void EndGame()
     {
-
+        Debug.LogError("Finish");
     }
 
     private void OnTriggerEnter(Collider other)
