@@ -1761,13 +1761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb02e5e60c1f0e4fb3850233fce1eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handleAnim: {fileID: 0}
-  firstSlot: {fileID: 0}
-  secondSlot: {fileID: 0}
-  thirdSlot: {fileID: 0}
-  slot1: 0
-  slot2: 0
-  slot3: 0
+  handleAnim: {fileID: 2907241969406070975}
+  firstSlot: {fileID: 5157249538682014219}
+  secondSlot: {fileID: 2323251125667675432}
+  thirdSlot: {fileID: 3736248663495554982}
 --- !u!1 &3857056003290321093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,8 +1806,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2112793287282010333}
   - component: {fileID: 6780594011312362819}
+  - component: {fileID: 3736248663495554982}
   m_Layer: 0
-  m_Name: Cylinder.004_16
+  m_Name: Third Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1855,6 +1853,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3736248663495554982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220399851558955623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce8b0df603777a4c9c9892223ced58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worked: 0
+  mySlot: {fileID: 0}
+  myRoll: 0
+  sg: {fileID: 5432748547391195901}
 --- !u!1 &4227054207760884834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,9 +3329,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4380830450230226652}
-  - component: {fileID: 8106982618561020899}
+  - component: {fileID: 294968808875745868}
+  - component: {fileID: 2323251125667675432}
   m_Layer: 0
-  m_Name: Cylinder.008_19
+  m_Name: Second Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3343,7 +3358,7 @@ Transform:
   m_Father: {fileID: 5059930486268323515}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8106982618561020899
+--- !u!95 &294968808875745868
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -3353,7 +3368,7 @@ Animator:
   m_GameObject: {fileID: 5849184706666081212}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce45224db2780294b9afb2376792eb5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3362,6 +3377,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2323251125667675432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849184706666081212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce8b0df603777a4c9c9892223ced58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worked: 0
+  mySlot: {fileID: 0}
+  myRoll: 0
+  sg: {fileID: 5432748547391195901}
 --- !u!1 &6121577263837788057
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,7 +4304,7 @@ GameObject:
   - component: {fileID: 5157249538682014219}
   - component: {fileID: 6386402577105964386}
   m_Layer: 0
-  m_Name: Cylinder.005_17
+  m_Name: First Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4311,11 +4342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce8b0df603777a4c9c9892223ced58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
-  sg: {fileID: 0}
-  rndSlot: 0
+  worked: 0
+  mySlot: {fileID: 0}
+  myRoll: 0
+  sg: {fileID: 5432748547391195901}
 --- !u!95 &6386402577105964386
 Animator:
   serializedVersion: 3

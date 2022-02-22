@@ -5,27 +5,39 @@ using DG.Tweening;
 
 public class Deneme : MonoBehaviour
 {
-    public Animator slot1;
-    public Animator slot2;
-    public Animator slot3;
 
 
+    public bool worked = false;
+
+
+    public Animator mySlot;
+    public int myRoll;
     public SlotGame sg;
-
-    public int rndSlot;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        mySlot = GetComponent<Animator>();
+    }
     void Start()
     {
-        GetComponent<Animator>();
         
-        slot1.SetTrigger("Slot" + sg.slot1);
-        slot2.SetTrigger("Slot" + sg.slot2);
-        slot3.SetTrigger("Slot" + sg.slot3);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+        
+    }
+
+    public void PlayAnimation()
+    {
+        if (worked == false)
+        {
+            mySlot.SetTrigger("Slot" + myRoll);
+
+            worked = true;
+        }
     }
 }

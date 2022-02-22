@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class NewCameraController : MonoBehaviour
 {
-
+    public EndGameEvents endGame;
     public Transform target;
 
     public float smoothSpeed = 2f;
     public Vector3 offset;
-
+    private void Awake()
+    {
+        endGame.onEndGameTrigger += StopAtEndGame;
+    }
     private void Start()
     {
         offset = transform.position - target.position;
@@ -20,5 +23,10 @@ public class NewCameraController : MonoBehaviour
         Vector3 desiredPosition = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition,Time.deltaTime* smoothSpeed);
         transform.position = smoothedPosition;
+    }
+
+    void StopAtEndGame()
+    {
+        GetComponent<NewCameraController>().enabled = false;
     }
 }

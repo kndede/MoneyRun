@@ -9,6 +9,9 @@ public class EndGameEvents : MonoBehaviour
     public static EndGameEvents ending;
 
     public event Action onEndGameTrigger;
+
+    public List<StackedCash> collectedCash;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -32,6 +35,20 @@ public class EndGameEvents : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        EndGameTrigger();
+        if (other.tag==("Player"))
+        {
+
+            EndGameTrigger();
+        }
+        else if (other.tag=="moneystash")
+        {
+            StackedCash sc = other.gameObject.GetComponent<StackedCash>();
+            collectedCash.Add(sc);
+        }
+    }
+
+    void CollectStacks()
+    {
+
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -6,37 +6,41 @@ using System;
 public class SlotGame : MonoBehaviour
 {
     public Animator handleAnim;
-    public Animator firstSlot;
-    public Animator secondSlot;
-    public Animator thirdSlot;
+    public Deneme firstSlot;
+    public Deneme secondSlot;
+    public Deneme thirdSlot;
 
 
     public Dictionary<int, int> keyValuePairs;
 
-
-
-    public int slot1;
-    public int slot2;
-    public int slot3;
+    int slot1;
+    int slot2;
+    int slot3;
     private void Start()
     {
 
         keyValuePairs = new Dictionary<int, int>() {
-            {0,90 },
-            {1,180 },
-            {2,270 },
-            {3,360 }
+            {0,5 },
+            {1,9 },
+            {2,7 },
+            {3,3 }
         };
 
 
 
 
         EndGameEvents.ending.onEndGameTrigger += AnimateSlot;
+
     }
 
     void AnimateSlot()
     {
         RandomizeSlots();
+        handleAnim.Play("anim");
+        firstSlot.PlayAnimation();
+        secondSlot.PlayAnimation();
+        thirdSlot.PlayAnimation();
+       // SlotWinCondition();
     }
 
     void RandomizeSlots()
@@ -48,9 +52,24 @@ public class SlotGame : MonoBehaviour
         int third = random.Next(0, 4);
 
 
-        slot1 = keyValuePairs[first];
-        slot2 = keyValuePairs[second];
-        slot3 = keyValuePairs[third];
+        firstSlot.myRoll = keyValuePairs[first]; 
+        slot1= keyValuePairs[first];
 
+        secondSlot.myRoll = keyValuePairs[second];
+        slot2= keyValuePairs[second];
+
+        thirdSlot.myRoll= keyValuePairs[third];
+        slot3= keyValuePairs[third];
+
+    }
+
+
+    void SlotWinCondition()
+    {
+        if (slot1==slot2 && slot2==slot3)
+        {
+            //collector 
+            Debug.Log("Kazandın!");
+        }
     }
 }

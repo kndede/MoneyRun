@@ -3444,6 +3444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa84ced516d4c148893f2b1011f4364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGameEvents: {fileID: 1551127145}
   leftLimit: -2.5
   rightLimit: 2.5
   forwardSpeed: 4
@@ -3875,6 +3876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affed2dfab7ff494ab37006aea12fe78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGame: {fileID: 1551127145}
   target: {fileID: 1480320132}
   smoothSpeed: 15
   offset: {x: 0, y: 5, z: -9}

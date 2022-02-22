@@ -7,6 +7,7 @@ TagManager:
   - Cash
   - SlidingObstacle
   - StackTrigger
+  - moneystash
   layers:
   - Default
   - TransparentFX

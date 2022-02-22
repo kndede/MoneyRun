@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public EndGameEvents endGameEvents;
+
+
     public float leftLimit = -2f;
     public float rightLimit = 2f;
     public float forwardSpeed = 4f;
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         myRigidbody = GetComponent<Rigidbody>();
+        endGameEvents.onEndGameTrigger += LockedControl;
     }
 
     private void Start()
@@ -107,4 +111,6 @@ public class PlayerController : MonoBehaviour
         isLocked = true;
         forwardSpeed = 0;
     }
+
+    
 }
