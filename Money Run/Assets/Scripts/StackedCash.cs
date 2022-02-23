@@ -48,6 +48,7 @@ public class StackedCash : MonoBehaviour
 
         DisableMeshRenderer();
 
+        dollarBlast.Play();
         //transform.DOJump(new Vector3(transform.position.x+2f,transform.position.y,transform.position.z+4f),2f,1,2);
     }
     public void DetachCash(Vector2 upperLeftCorner, Vector2 downRightCorner)

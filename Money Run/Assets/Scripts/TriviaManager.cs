@@ -10,10 +10,19 @@ public class TriviaManager : MonoBehaviour
     public AnswerPanelController wrongAnswer;
     public TextMeshProUGUI questionText;
 
+    public MyMoney myMoney;
+
+
+    public int correctAnswerMultiplier = 2;
+    private void Start()
+    {
+        TriviaEndEvents.triviaEndEvents.endTrivia += GetEndscore;
+    }
+
 
     // scriptable obje dizaynı public QuestionScriptableObject questionScriptableObject;
 
-    
+
     public void EnablePanels()
     {
        // questionText.text = questionScriptableObject.question;
@@ -22,9 +31,13 @@ public class TriviaManager : MonoBehaviour
         wrongAnswer.gameObject.SetActive(true);
     }
 
-    public int GetTriviaScore()
+    public void ConvertCollected()
     {
-        int scoreAfterTrivia = correctAnswer.collector * 2;
-        return scoreAfterTrivia;
+        myMoney.money = correctAnswer.collector * correctAnswerMultiplier;
+    }
+
+    public void GetEndscore()
+    {
+        questionText.gameObject.SetActive(false);
     }
 }

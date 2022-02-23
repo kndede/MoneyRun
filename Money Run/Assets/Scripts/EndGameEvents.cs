@@ -12,6 +12,10 @@ public class EndGameEvents : MonoBehaviour
 
     public List<StackedCash> collectedCash;
 
+    public StackBodiesController sbc;
+    public MyMoney myMoney;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -30,9 +34,10 @@ public class EndGameEvents : MonoBehaviour
 
     void EndGame()
     {
-        Debug.LogError("Finish");
+        Debug.Log("Finish");
     }
 
+    private Stack myStack;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag==("Player"))
@@ -40,15 +45,30 @@ public class EndGameEvents : MonoBehaviour
 
             EndGameTrigger();
         }
-        else if (other.tag=="moneystash")
-        {
-            StackedCash sc = other.gameObject.GetComponent<StackedCash>();
-            collectedCash.Add(sc);
-        }
+
+            if (other.gameObject.tag == "StackTrigger")
+            {
+                myStack = other.gameObject.GetComponent<Stack>();
+                Debug.Log("Collided stack number is " + myStack.myIndex);
+                if (myStack.isStacked)
+                {
+                    int cashIndex = myStack.myIndex;
+
+
+                     myMoney.money++;
+                    myMoney.DisplayMoney();
+
+                    sbc.CollectCash(cashIndex);
+
+                }
+            }
+        
     }
 
     void CollectStacks()
     {
 
     }
+
+    
 }
