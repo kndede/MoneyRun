@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SliderMovement : MonoBehaviour
+public class Saw : MonoBehaviour
 {
-
-    public float delta = 2.3f;  
+    public float delta = 2.3f;
     [Range(3, 6)]
-    public float slidingSpeed = 3f;
+    public float slidingSpeed = 2f;
+
+    public float speedRot = 25f;
+
+
     private Vector3 startPos;
 
     public DestackArea myDestackArea;
@@ -16,9 +19,9 @@ public class SliderMovement : MonoBehaviour
 
     private void Awake()
     {
-       startPos = new Vector3(0f, 1.3f, transform.position.z);
+        startPos = new Vector3(0f, 1f, transform.position.z);
     }
-   
+
 
     void Start()
     {
@@ -30,6 +33,7 @@ public class SliderMovement : MonoBehaviour
     void Update()
     {
         SliderMotion();
+        Rotation();
     }
 
     void SliderMotion()
@@ -40,6 +44,14 @@ public class SliderMovement : MonoBehaviour
         transform.position = v;
     }
 
-    
-    
+
+    void Rotation()
+    {
+        float rot = Time.deltaTime * speedRot;
+        transform.Rotate(new Vector3(0f, rot, 0f));
+          
+    }
+
+
+	
 }

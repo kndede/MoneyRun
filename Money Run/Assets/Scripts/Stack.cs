@@ -69,6 +69,18 @@ public class Stack : MonoBehaviour
             //Throw the stack from collided area.
 
         }
+        else if (other.gameObject.tag=="SawObstacle")
+        {
+            Saw thisSm = other.gameObject.GetComponent<Saw>();
+
+            Debug.Log("Stack " + myIndex + " has been hit.");
+            if (this.isStacked == true)
+            {
+                Vector2 upperLeftCorner = thisSm.upperLeftCorner;
+                Vector2 downRightCorner = thisSm.downRightCorner;
+                sbc.DestroyStacks(this.myIndex, upperLeftCorner, downRightCorner);
+            }
+        }
     }
     
    
