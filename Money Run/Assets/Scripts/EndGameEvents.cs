@@ -1,20 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class EndGameEvents : MonoBehaviour
 {
-
     public static EndGameEvents ending;
 
     public event Action onEndGameTrigger;
 
-    public List<StackedCash> collectedCash;
-
     public StackBodiesController sbc;
-    public MyMoney myMoney;
 
+
+    public SlotGame slotGame;
+    public MyMoney myMoney;
+    public TextMeshProUGUI moneyText;
 
     // Start is called before the first frame update
     private void Awake()
@@ -38,12 +39,16 @@ public class EndGameEvents : MonoBehaviour
     }
 
     private Stack myStack;
+
+    public float endGameAnimationDelay = 2f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag==("Player"))
         {
 
             EndGameTrigger();
+            StartCoroutine(SlotEnding());
         }
 
             if (other.gameObject.tag == "StackTrigger")
@@ -55,7 +60,8 @@ public class EndGameEvents : MonoBehaviour
                     int cashIndex = myStack.myIndex;
 
 
-                     myMoney.money++;
+                   
+                    myMoney.money++;
                     myMoney.DisplayMoney();
 
                     sbc.CollectCash(cashIndex);
@@ -65,9 +71,30 @@ public class EndGameEvents : MonoBehaviour
         
     }
 
-    void CollectStacks()
+    IEnumerator SlotEnding()
     {
 
+        yield return new WaitForSeconds(endGameAnimationDelay);
+
+        int winnings = slotGame.SlotWinCondition();
+
+        if (winnings> 2)
+        {
+            Debug.Log("" + winnings + " katını kazandın!");
+            myMoney.money *= winnings;
+        }
+        else
+        {
+            Debug.Log("2 katını kazandın!");
+            myMoney.money *= winnings;
+        }
+
+        myMoney.DisplayMoney();
+    }
+
+    void EndGamePoints()
+    {
+        myMoney.DisplayMoney();
     }
 
     

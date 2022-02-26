@@ -64,12 +64,12 @@ public class SlotGame : MonoBehaviour
     }
 
 
-    void SlotWinCondition()
+    public int SlotWinCondition()
     {
         if (slot1==slot2 && slot2==slot3)
         {
-            //collector 
-            Debug.Log("Kazandın!");
+            return slot1;
         }
+        return 2;
     }
 }

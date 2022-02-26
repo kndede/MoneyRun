@@ -10,6 +10,11 @@ public class TriviaManager : MonoBehaviour
     public AnswerPanelController wrongAnswer;
     public TextMeshProUGUI questionText;
 
+    public GameObject correctImage;
+    public GameObject falseImage;
+    public float imageDelay = 0;
+
+
     public MyMoney myMoney;
 
 
@@ -38,6 +43,29 @@ public class TriviaManager : MonoBehaviour
 
     public void GetEndscore()
     {
+        if (correctAnswer.collector>wrongAnswer.collector)
+        {
+            correctImage.gameObject.SetActive(true);
+
+        }
+        else
+        {
+            falseImage.gameObject.SetActive(true);
+        }
+        StartCoroutine(ImageCoroutine());
+    }
+
+    IEnumerator ImageCoroutine()
+    {
+
+        yield return new WaitForSeconds(imageDelay);
+
         questionText.gameObject.SetActive(false);
+
+        falseImage.gameObject.SetActive(false);
+
+        correctImage.gameObject.SetActive(false);
+
+
     }
 }
