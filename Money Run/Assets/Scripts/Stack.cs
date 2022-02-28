@@ -48,8 +48,9 @@ public class Stack : MonoBehaviour
     {
         if (other.gameObject.tag=="Cash")
         {
-            this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
+
             Destroy(other.gameObject);
+            this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
             sbc.ActiveTheStack();
              
         }

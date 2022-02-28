@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody>();
         endGameEvents.onEndGameTrigger += LockedControl;
+        endGameEvents.onEndGameTrigger += EndGamePositioning;
     }
 
     private void Start()
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
     }
-
+    
     private void TouchBegan(TouchInput touch)
     {
         targetPos = transform.position;
@@ -115,6 +117,9 @@ public class PlayerController : MonoBehaviour
         isLocked = true;
         forwardSpeed = 0;
     }
+    private void EndGamePositioning()
+    {
+        transform.DOLocalMoveX(0, 1.5f);
+    }
 
-    
 }

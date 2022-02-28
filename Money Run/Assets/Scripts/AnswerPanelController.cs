@@ -20,7 +20,7 @@ public class AnswerPanelController : MonoBehaviour
     
     private void Awake()
     {
-        dta = collectorText.GetComponent<DOTweenAnimation>();
+       dta = collectorText.GetComponent<DOTweenAnimation>();
     }
     private void Start()
     {
@@ -45,9 +45,9 @@ public class AnswerPanelController : MonoBehaviour
 
                     dta.DOComplete();
                     Debug.Log("Killed animation");
-                    collectorText.text = collector.ToString();
+                    collectorText.text = "$" + collector.ToString();
 
-                    dta.DOPlay();
+                   dta.DORestart();
 
                     sbc.CollectCash(cashIndex);
                     if (cashIndex==0)

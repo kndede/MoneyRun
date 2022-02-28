@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class MyMoney : MonoBehaviour
 {
 
     public TextMeshProUGUI cashCounterText;
-
+    private DOTweenAnimation dta;
     private void Awake()
     {
         cashCounterText= GetComponent<TextMeshProUGUI>();
+        dta = GetComponent<DOTweenAnimation>();
     }
     private void Start()
     {
@@ -20,6 +22,8 @@ public class MyMoney : MonoBehaviour
 
     public void DisplayMoney()
     {
+        dta.DOComplete();
         cashCounterText.text = money.ToString();
+        dta.DORestart();
     }
 }

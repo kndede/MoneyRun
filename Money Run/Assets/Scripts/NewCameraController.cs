@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class NewCameraController : MonoBehaviour
 {
@@ -28,5 +29,6 @@ public class NewCameraController : MonoBehaviour
     void StopAtEndGame()
     {
         GetComponent<NewCameraController>().enabled = false;
+        transform.DOLocalMoveX(0, 1.5f);
     }
 }

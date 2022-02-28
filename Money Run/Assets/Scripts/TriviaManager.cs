@@ -62,6 +62,8 @@ public class TriviaManager : MonoBehaviour
 
         questionText.gameObject.SetActive(false);
 
+        correctAnswer.gameObject.SetActive(false);
+        wrongAnswer.gameObject.SetActive(false);
         falseImage.gameObject.SetActive(false);
 
         correctImage.gameObject.SetActive(false);
