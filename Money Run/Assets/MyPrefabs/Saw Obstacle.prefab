@@ -250,10 +250,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7e7c3fa9af9c7142965238448e8f807, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e117032a227591643ae3c7d10b073f95, type: 2}
     - target: {fileID: -7080008205057387153, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
       propertyPath: m_TagString
-      value: SlidingObstacle
+      value: SawObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: -4302473800335097922, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b2ddf2b9ff9fd740852d088dc17d3b3, type: 2}
+    - target: {fileID: -4302473800335097922, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a73fdb6e94ad7b54cae422cbe88bf8db, type: 2}
+    - target: {fileID: -4302473800335097922, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59ee203d2fd1e6941b98c976e5a51264, type: 2}
+    - target: {fileID: -4302473800335097922, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c4349ac53954a2438868145cbc91992, type: 2}
     - target: {fileID: 919132149155446097, guid: 522f3a088d05f174d9d0b619be4f2e6e, type: 3}
       propertyPath: m_Name
       value: Saw

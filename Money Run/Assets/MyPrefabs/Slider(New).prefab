@@ -249,6 +249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7e7c3fa9af9c7142965238448e8f807, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e117032a227591643ae3c7d10b073f95, type: 2}
     - target: {fileID: -5568371526223589888, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
       propertyPath: m_TagString
       value: SlidingObstacle
@@ -257,6 +265,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: deneme
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7e7c3fa9af9c7142965238448e8f807, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b2ddf2b9ff9fd740852d088dc17d3b3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d7e302e3a1b66a40baf72668287beaa, type: 3}
 --- !u!4 &5120658305781528629 stripped
