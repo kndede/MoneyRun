@@ -7,8 +7,8 @@ using DG.Tweening;
 public class PlayerController : MonoBehaviour
 {
     public EndGameEvents endGameEvents;
-    
-    
+    public StartGameEvent startGameEvent;
+    public Animator characterAnimator;
     
 
 
@@ -30,8 +30,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        endGameEvents.onEndGameTrigger += LockedControl;
-        endGameEvents.onEndGameTrigger += EndGamePositioning;
     }
 
     private void Start()
@@ -39,6 +37,10 @@ public class PlayerController : MonoBehaviour
         TouchManager.instance.onTouchBegan += TouchBegan;
         TouchManager.instance.onTouchMoved += TouchMoved;
         TouchManager.instance.onTouchEnded += TouchEnded;
+
+        endGameEvents.onEndGameTrigger += LockedControl;
+        endGameEvents.onEndGameTrigger += EndGamePositioning;
+        startGameEvent.onStartGameTrigger += LockedControl;
     }
 
     private void Update()
@@ -111,11 +113,21 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f), Time.deltaTime * forwardSpeed);
     }
 
-    private bool isLocked = false;
+    public bool isLocked = true;
     public void LockedControl()
     {
-        isLocked = true;
-        forwardSpeed = 0;
+        if (isLocked)
+        {
+            isLocked = false;
+            characterAnimator.SetTrigger("Walk");
+            forwardSpeed = 6f;
+        }
+        else
+        {
+            isLocked = true;
+            characterAnimator.SetTrigger("Idle");
+            forwardSpeed = 0;
+        }
     }
     private void EndGamePositioning()
     {

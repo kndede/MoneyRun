@@ -23,7 +23,7 @@ public class MyMoney : MonoBehaviour
     public void DisplayMoney()
     {
         dta.DOComplete();
-        cashCounterText.text = money.ToString();
+        cashCounterText.text = (money*10).ToString() + "$";
         dta.DORestart();
     }
 }

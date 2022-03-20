@@ -12,6 +12,8 @@ public class EndGameEvents : MonoBehaviour
 
     public StackBodiesController sbc;
 
+    public GameObject successCanvas;
+
 
     public SlotGame slotGame;
     public MyMoney myMoney;
@@ -90,6 +92,7 @@ public class EndGameEvents : MonoBehaviour
         }
 
         myMoney.DisplayMoney();
+        successCanvas.SetActive(true);
     }
 
     void EndGamePoints()
