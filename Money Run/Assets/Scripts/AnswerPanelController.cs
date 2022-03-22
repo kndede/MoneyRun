@@ -45,7 +45,7 @@ public class AnswerPanelController : MonoBehaviour
 
                     dta.DOComplete();
                     Debug.Log("Killed animation");
-                    collectorText.text = "$" + collector.ToString();
+                    collectorText.text = "$" + (collector*10).ToString();
 
                    dta.DORestart();
 

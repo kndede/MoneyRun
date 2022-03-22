@@ -6,11 +6,12 @@ using DG.Tweening;
 
 public class MyMoney : MonoBehaviour
 {
-
+    public static MyMoney _money;
     public TextMeshProUGUI cashCounterText;
     private DOTweenAnimation dta;
     private void Awake()
     {
+        _money = this;
         cashCounterText= GetComponent<TextMeshProUGUI>();
         dta = GetComponent<DOTweenAnimation>();
     }
@@ -18,12 +19,27 @@ public class MyMoney : MonoBehaviour
     {
         TriviaEndEvents.triviaEndEvents.endTrivia += DisplayMoney;
     }
-    public int money { get; set; }
+    public int money;
 
     public void DisplayMoney()
     {
         dta.DOComplete();
-        cashCounterText.text = (money*10).ToString() + "$";
+        cashCounterText.text = "$" + (money).ToString() ;
         dta.DORestart();
+    }
+    public void AddMoney()
+    {
+        money += 10;
+    }
+
+    public void AddMoney(int amount)
+    {
+
+        money += amount;
+    }
+    public void AddMoney(int amount,int multiplier)
+    {
+
+        money += amount*multiplier;
     }
 }

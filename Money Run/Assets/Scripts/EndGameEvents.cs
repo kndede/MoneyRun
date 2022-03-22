@@ -62,9 +62,8 @@ public class EndGameEvents : MonoBehaviour
                     int cashIndex = myStack.myIndex;
 
 
-                   
-                    myMoney.money++;
-                    myMoney.DisplayMoney();
+                     MyMoney._money.AddMoney();
+                    MyMoney._money.DisplayMoney();
 
                     sbc.CollectCash(cashIndex);
 
@@ -92,6 +91,9 @@ public class EndGameEvents : MonoBehaviour
         }
 
         myMoney.DisplayMoney();
+
+        yield return new WaitForSeconds(1f);
+
         successCanvas.SetActive(true);
     }
 

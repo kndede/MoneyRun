@@ -5,9 +5,8 @@ using UnityEngine;
 public class SliderMovement : MonoBehaviour
 {
 
-    public float delta = 2.3f;  
-    [Range(3, 6)]
-    public float slidingSpeed = 3f;
+    public float delta = 2.3f;
+    public float slidingSpeed = 2.25f;
     private Vector3 startPos;
 
     public DestackArea myDestackArea;

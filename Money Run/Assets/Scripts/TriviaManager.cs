@@ -15,7 +15,7 @@ public class TriviaManager : MonoBehaviour
     public float imageDelay = 0;
 
 
-    public MyMoney myMoney;
+   // public MyMoney myMoney;
 
 
     public int correctAnswerMultiplier = 2;
@@ -38,7 +38,7 @@ public class TriviaManager : MonoBehaviour
 
     public void ConvertCollected()
     {
-        myMoney.money = correctAnswer.collector * correctAnswerMultiplier;
+        MyMoney._money.AddMoney(correctAnswer.collector*10 , correctAnswerMultiplier);
     }
 
     public void GetEndscore()

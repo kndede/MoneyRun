@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delta: 2.3
-  slidingSpeed: 3
+  slidingSpeed: 2.25
   myDestackArea: {fileID: 5396592920548289910}
   upperLeftCorner: {x: 0, y: 0}
   downRightCorner: {x: 0, y: 0}

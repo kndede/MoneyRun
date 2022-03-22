@@ -5,7 +5,6 @@ using UnityEngine;
 public class Saw : MonoBehaviour
 {
     public float delta = 2.3f;
-    [Range(3, 6)]
     public float slidingSpeed = 2f;
 
     public float speedRot = 25f;

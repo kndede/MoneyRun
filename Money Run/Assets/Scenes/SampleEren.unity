@@ -767,6 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashCounterText: {fileID: 0}
+  money: 0
 --- !u!114 &287215239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3884,7 +3885,7 @@ MonoBehaviour:
   slotGame: {fileID: 1223983877}
   myMoney: {fileID: 287215238}
   moneyText: {fileID: 287215239}
-  endGameAnimationDelay: 2
+  endGameAnimationDelay: 2.5
 --- !u!54 &1551127146
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4173,7 +4174,6 @@ MonoBehaviour:
   correctImage: {fileID: 570279820}
   falseImage: {fileID: 1372673453}
   imageDelay: 1.5
-  myMoney: {fileID: 287215238}
   correctAnswerMultiplier: 2
 --- !u!1 &1687258581
 GameObject:
@@ -7044,6 +7044,10 @@ PrefabInstance:
     - target: {fileID: 957405208, guid: 89170a7ca6c390943bb7e6278f1ed476, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 452574846659238680, guid: 89170a7ca6c390943bb7e6278f1ed476, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770808882419509194, guid: 89170a7ca6c390943bb7e6278f1ed476, type: 3}
       propertyPath: tm
