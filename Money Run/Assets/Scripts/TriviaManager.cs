@@ -13,7 +13,7 @@ public class TriviaManager : MonoBehaviour
     public GameObject correctImage;
     public GameObject falseImage;
     public float imageDelay = 0;
-
+    public int _triviaId;
 
    // public MyMoney myMoney;
 
@@ -41,18 +41,26 @@ public class TriviaManager : MonoBehaviour
         MyMoney._money.AddMoney(correctAnswer.collector*10 , correctAnswerMultiplier);
     }
 
-    public void GetEndscore()
+    public void GetEndscore(int triviaId)
     {
-        if (correctAnswer.collector>wrongAnswer.collector)
+        if (triviaId==_triviaId)
         {
-            correctImage.gameObject.SetActive(true);
+            if (correctAnswer.collector > wrongAnswer.collector)
+            {
+                correctImage.gameObject.SetActive(true);
 
+            }
+            else
+            {
+                falseImage.gameObject.SetActive(true);
+            }
+            StartCoroutine(ImageCoroutine());
+            _triviaId++;
         }
         else
         {
-            falseImage.gameObject.SetActive(true);
+            Debug.Log("Trivia Id didnt match.");
         }
-        StartCoroutine(ImageCoroutine());
     }
 
     IEnumerator ImageCoroutine()

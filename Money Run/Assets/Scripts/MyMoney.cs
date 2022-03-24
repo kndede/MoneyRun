@@ -17,14 +17,25 @@ public class MyMoney : MonoBehaviour
     }
     private void Start()
     {
+
         TriviaEndEvents.triviaEndEvents.endTrivia += DisplayMoney;
     }
     public int money;
-
+    public int _triviaId;
+    public void DisplayMoney(int triviaId)
+    {
+        if (triviaId==this._triviaId)
+        {
+            dta.DOComplete();
+            cashCounterText.text = "$" + (money).ToString();
+            _triviaId++;
+            dta.DORestart();
+        }
+    }
     public void DisplayMoney()
     {
         dta.DOComplete();
-        cashCounterText.text = "$" + (money).ToString() ;
+        cashCounterText.text = "$" + (money).ToString();
         dta.DORestart();
     }
     public void AddMoney()

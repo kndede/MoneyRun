@@ -9,7 +9,7 @@ public class TriviaTrigger : MonoBehaviour
 {
 
     public TriviaManager tm;
-
+    
 
 
     private Collider myCol;

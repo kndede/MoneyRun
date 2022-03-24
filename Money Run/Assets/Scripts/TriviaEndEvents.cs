@@ -7,31 +7,33 @@ public class TriviaEndEvents : MonoBehaviour
 {
     public static TriviaEndEvents triviaEndEvents;
 
-    public event Action endTrivia;
+    public event Action<int> endTrivia;
+    public List<GameObject> endTriggerObjects;
 
+    public int _triviaCount;
     private void Awake()
     {
         triviaEndEvents = this;
+        foreach (GameObject item in endTriggerObjects)
+        {
+            _triviaCount++;
+        }
+
     }
 
-    public void EndTriviaManager()
+    public int triviaOrder = 0;
+    public void EndTriviaManager(int triviaId)
     {
         if (endTrivia != null)
         {
-            endTrivia();
+            endTrivia(triviaOrder);
+
+            triviaOrder++;
         }
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == ("StackTrigger"))
-        {
-            EndTriviaManager();
-        }
-        
-    }
-
+    
    
 
 }

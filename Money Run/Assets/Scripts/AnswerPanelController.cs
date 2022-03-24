@@ -25,10 +25,11 @@ public class AnswerPanelController : MonoBehaviour
     private void Start()
     {
 
-        TriviaEndEvents.triviaEndEvents.endTrivia += ClearCollectorText;
+       TriviaEndEvents.triviaEndEvents.endTrivia += ClearCollectorText;
     }
 
     private Stack myStack;
+    public int _triviaId;
     private void OnTriggerEnter(Collider other)
     {
 
@@ -61,9 +62,12 @@ public class AnswerPanelController : MonoBehaviour
         
     }
 
-    void ClearCollectorText()
+    void ClearCollectorText(int triviaId)
     {
-        collectorText.text="";
+        if (_triviaId==triviaId)
+        {
+            collectorText.text = "";
+        }
     }
 
 
