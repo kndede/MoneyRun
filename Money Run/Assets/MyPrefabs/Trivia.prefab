@@ -86,12 +86,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7702876007016362582}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -260}
-  m_SizeDelta: {x: 1125, y: 230}
+  m_SizeDelta: {x: 1125, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7702876006698324195
 CanvasRenderer:
@@ -193,9 +193,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 7702876007258696928}
   - {fileID: 7702876007502348993}
   - {fileID: 7702876006698324220}
+  - {fileID: 7702876007258696928}
   m_Father: {fileID: 7702876006474662881}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -297,7 +297,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7702876007016362582}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -352,7 +352,7 @@ MonoBehaviour:
     (Basketball Player)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d56e448cf017ee42964678a063e76b2, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 4823253122238618029, guid: 5d56e448cf017ee42964678a063e76b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -574,12 +574,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7702876007016362582}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -260}
-  m_SizeDelta: {x: 1125, y: 230}
+  m_SizeDelta: {x: 1125, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7702876007502348995
 CanvasRenderer:
@@ -727,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d223f460b27774ea5dbea80efc0d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triviaId: 0
 --- !u!1 &7702876008271625111
 GameObject:
   m_ObjectHideFlags: 0

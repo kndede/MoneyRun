@@ -1777,6 +1777,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2656612341815248180, guid: d5157e0ddda8f0e49881fc490767ff5d, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656612341815248180, guid: d5157e0ddda8f0e49881fc490767ff5d, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1080
       objectReference: {fileID: 0}
@@ -8355,6 +8359,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4227808109149474256, guid: 4480f14b461c4f1428958a8d2cb9225b, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227808109149474256, guid: 4480f14b461c4f1428958a8d2cb9225b, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0
       objectReference: {fileID: 0}
@@ -8492,7 +8500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4227808110002386983, guid: 4480f14b461c4f1428958a8d2cb9225b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 400
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5924984490737334512, guid: 4480f14b461c4f1428958a8d2cb9225b, type: 3}
       propertyPath: m_Enabled
