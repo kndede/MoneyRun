@@ -729,7 +729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad02fe790ba8ae04eb23e82d0acc2c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashCounterText: {fileID: 0}
+  cashCounterText: {fileID: 287215239}
+  dta: {fileID: 0}
   money: 0
   _triviaId: 0
 --- !u!114 &287215239
@@ -1040,14 +1041,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7754973094632047794, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7754973094632047795, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7754973094632047795, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
-      propertyPath: isLoaderScene
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7754973094632047820, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}

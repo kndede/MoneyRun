@@ -8,16 +8,27 @@ public class MyMoney : MonoBehaviour
 {
     public static MyMoney _money;
     public TextMeshProUGUI cashCounterText;
-    private DOTweenAnimation dta;
+    [SerializeField] private DOTweenAnimation dta;
     private void Awake()
     {
-        _money = this;
-        cashCounterText= GetComponent<TextMeshProUGUI>();
+        if (_money==null)
+        {
+
+            _money = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
+
+        cashCounterText = GetComponent<TextMeshProUGUI>();
         dta = GetComponent<DOTweenAnimation>();
     }
     private void Start()
     {
-
+        _triviaId = 0;
+        DisplayMoney();
         TriviaEndEvents.triviaEndEvents.endTrivia += DisplayMoney;
     }
     public int money;
@@ -53,4 +64,6 @@ public class MyMoney : MonoBehaviour
 
         money += amount*multiplier;
     }
+
+
 }

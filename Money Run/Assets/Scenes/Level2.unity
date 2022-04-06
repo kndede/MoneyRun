@@ -730,6 +730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashCounterText: {fileID: 0}
+  dta: {fileID: 0}
   money: 0
   _triviaId: 0
 --- !u!114 &287215239
@@ -2480,6 +2481,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2740994451798353037, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
+      propertyPath: dta
+      value: 
+      objectReference: {fileID: 287215241}
+    - target: {fileID: 2740994451798353037, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
+      propertyPath: cashCounterText
+      value: 
+      objectReference: {fileID: 287215239}
     - target: {fileID: 7754973094632047794, guid: 13e019c4c8c299f429c91d7c721ee41e, type: 3}
       propertyPath: m_RootOrder
       value: 11
