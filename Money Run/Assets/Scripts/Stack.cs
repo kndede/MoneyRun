@@ -46,7 +46,7 @@ public class Stack : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag=="Cash")
+        if (other.gameObject.tag=="Cash" && isStacked==false)
         {
 
             Destroy(other.gameObject);
