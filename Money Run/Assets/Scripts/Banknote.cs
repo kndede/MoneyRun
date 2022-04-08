@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Banknote : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isCollected = false;
+    private void OnEnable()
     {
-        
+        isCollected = false;
+    }
+    public void CollectTheBanknote(bool _isCollected)
+    {
+        isCollected = _isCollected;
+        if (_isCollected==true)
+        {
+
+            DestroyTheBanknote();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void DestroyTheBanknote()
     {
-        
+        Destroy(this.gameObject);
     }
 }

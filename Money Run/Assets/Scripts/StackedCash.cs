@@ -64,7 +64,8 @@ public class StackedCash : MonoBehaviour
 
 
         GameObject newObject = Instantiate(banknote, transform.position, Quaternion.identity);
-
+        newObject.AddComponent<Banknote>();
+        newObject.GetComponent<Banknote>().CollectTheBanknote(false);
         newObject.transform.DOScale(new Vector3(2, 2, 2), jumpDuration);
         newObject.transform.DORotate(new Vector3(0, 90f, 0), jumpDuration);
 

@@ -46,9 +46,10 @@ public class Stack : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag=="Cash" && isStacked==false)
+        if (other.gameObject.tag=="Cash" && other.gameObject.GetComponent<Banknote>()!=null)
         {
-
+            other.gameObject.GetComponent<Banknote>().CollectTheBanknote(true);
+            other.gameObject.SetActive(false);
             Destroy(other.gameObject);
             this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
             sbc.ActiveTheStack();
