@@ -12,37 +12,40 @@ public class Stack : MonoBehaviour
 
     private StackBodiesController sbc;
     private StackedCash stackedCash;
+
+
+    BoxCollider myCollider;
     private void Awake()
     {
         sbc = GetComponentInParent<StackBodiesController>();
+        myCollider = GetComponent<BoxCollider>();
 
-    }
-    void Start()
-    {
-
-    }
-    private void OnEnable()
-    { 
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void DeactiveCollider()
     {
         this.isStacked = false;
         this.activeCollider = false;
-
+        SetColliderSize();
         Debug.Log("Collider " + myIndex + " is deactived.");
         this.gameObject.SetActive(false);
     }
     public void ActiveCollider()
     {
         this.transform.localScale = new Vector3(1, 1f, 1f);
+        SetColliderSize();
         this.gameObject.SetActive(true);
         this.activeCollider = true;
+    }
+    public void ShrinkColliderSize()
+    {
+
+        myCollider.size = new Vector3(1f, 0.75f, 0.75f);
+    }
+    public void SetColliderSize()
+    {
+
+        myCollider.size = new Vector3(1, 1f, 1f);
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -51,7 +54,8 @@ public class Stack : MonoBehaviour
             other.gameObject.GetComponent<Banknote>().CollectTheBanknote(true);
             other.gameObject.SetActive(false);
             Destroy(other.gameObject);
-            this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
+            //this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
+            ShrinkColliderSize();
             sbc.ActiveTheStack();
              
         }

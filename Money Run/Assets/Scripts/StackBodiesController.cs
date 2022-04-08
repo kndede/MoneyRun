@@ -99,6 +99,8 @@ public class StackBodiesController : MonoBehaviour
 
                 stackColliders[i].isStacked = false;
                 stackColliders[i + 1].DeactiveCollider();
+                stackColliders[i].SetColliderSize();
+
                 stackedCash[i].DetachCash(upperLeftCorner, downRightCorner);
                 Debug.Log("Cash number  " + i + " is detached.");
 
