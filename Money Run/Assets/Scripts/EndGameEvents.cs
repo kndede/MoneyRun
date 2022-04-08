@@ -19,6 +19,10 @@ public class EndGameEvents : MonoBehaviour
     public MyMoney myMoney;
     public TextMeshProUGUI moneyText;
 
+
+    public LevelManager lvlMngr;
+    public TextMeshProUGUI uiMoney;
+    public GameObject UIMoney;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -93,14 +97,21 @@ public class EndGameEvents : MonoBehaviour
         myMoney.DisplayMoney();
 
         yield return new WaitForSeconds(1f);
-
+        LevelManagerWallet();
+        uiMoney.text = "$" + lvlMngr.wallet;
+        UIMoney.SetActive(true);
         successCanvas.SetActive(true);
     }
 
     void EndGamePoints()
     {
+
         myMoney.DisplayMoney();
     }
+    void LevelManagerWallet()
+    {
 
+        lvlMngr.wallet += myMoney.money;
+    }
     
 }

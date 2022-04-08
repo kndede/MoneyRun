@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 
     public int level;
     public bool isLoaderScene;
-
+    public int wallet;
     private void Awake()
     {
         if (Instance == null)
