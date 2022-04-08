@@ -7,7 +7,7 @@ using TMPro;
 public class EndGameEvents : MonoBehaviour
 {
     public static EndGameEvents ending;
-
+    
     public event Action onEndGameTrigger;
 
     public StackBodiesController sbc;
@@ -20,7 +20,6 @@ public class EndGameEvents : MonoBehaviour
     public TextMeshProUGUI moneyText;
 
 
-    public LevelManager lvlMngr;
     public TextMeshProUGUI uiMoney;
     public GameObject UIMoney;
     // Start is called before the first frame update
@@ -29,7 +28,9 @@ public class EndGameEvents : MonoBehaviour
         ending = this;
         onEndGameTrigger += EndGame;
     }
-
+    private void Start()
+    {
+    }
 
     public void EndGameTrigger()
     {
@@ -98,7 +99,7 @@ public class EndGameEvents : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         LevelManagerWallet();
-        uiMoney.text = "$" + lvlMngr.wallet;
+        uiMoney.text = "$" + LevelManager.Instance.wallet;
         UIMoney.SetActive(true);
         successCanvas.SetActive(true);
     }
@@ -111,7 +112,7 @@ public class EndGameEvents : MonoBehaviour
     void LevelManagerWallet()
     {
 
-        lvlMngr.wallet += myMoney.money;
+        LevelManager.Instance.wallet += myMoney.money;
     }
     
 }
