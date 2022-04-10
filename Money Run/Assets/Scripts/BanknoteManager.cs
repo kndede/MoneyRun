@@ -12,9 +12,25 @@ public class BanknoteManager : MonoBehaviour
             banknotes[i].gameObject.tag = "Cash";
         }
     }
-
-    public void BanknoteCreator(Vector3 pos)
+    public List<Banknote> collectedBaknotes;
+    public void CollectedBanknoteList(Banknote _banknote)
     {
+        collectedBaknotes.Add(_banknote);
+    }
+    public bool IsBanknoteCollected(Banknote _banknote)
+    {
+        if (collectedBaknotes.Count>0)
+        {
 
+            foreach (Banknote item in collectedBaknotes)
+            {
+                if (item == _banknote)
+                {
+                    return true;
+                }
+            }
+        }
+         return false;
+        
     }
 }

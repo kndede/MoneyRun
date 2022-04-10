@@ -9,6 +9,9 @@ public class MyMoney : MonoBehaviour
     public static MyMoney _money;
     public TextMeshProUGUI cashCounterText;
     [SerializeField] private DOTweenAnimation dta;
+
+    [SerializeField] private DOTweenAnimation cashAnim;
+    [SerializeField] private CashAnimUI cashAnimUI;
     private void Awake()
     {
         if (_money==null)
@@ -23,12 +26,12 @@ public class MyMoney : MonoBehaviour
         }
 
         cashCounterText = GetComponent<TextMeshProUGUI>();
-        dta = GetComponent<DOTweenAnimation>();
+       // dta = GetComponent<DOTweenAnimation>();
     }
     private void Start()
     {
         _triviaId = 0;
-        DisplayMoney();
+        DisplayMoney(true);
         TriviaEndEvents.triviaEndEvents.endTrivia += DisplayMoney;
     }
     public int money;
@@ -38,6 +41,8 @@ public class MyMoney : MonoBehaviour
         if (triviaId==this._triviaId)
         {
             dta.DOComplete();
+
+            cashAnimUI.Instantiator();
             cashCounterText.text = "$" + (money).ToString();
             _triviaId++;
             dta.DORestart();
@@ -46,8 +51,22 @@ public class MyMoney : MonoBehaviour
     public void DisplayMoney()
     {
         dta.DOComplete();
+
+        cashAnimUI.Instantiator();
         cashCounterText.text = "$" + (money).ToString();
         dta.DORestart();
+    }
+    public void DisplayMoney(bool isStart)
+    {
+        if (isStart)
+        {
+
+            dta.DOComplete();
+
+            cashCounterText.text = "$" + (money).ToString();
+            dta.DORestart();
+        }
+
     }
     public void AddMoney()
     {
@@ -57,11 +76,11 @@ public class MyMoney : MonoBehaviour
     public void AddMoney(int amount)
     {
 
+
         money += amount;
     }
     public void AddMoney(int amount,int multiplier)
     {
-
         money += amount*multiplier;
     }
 

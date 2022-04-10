@@ -15,11 +15,13 @@ public class Stack : MonoBehaviour
 
 
     BoxCollider myCollider;
+
+    [SerializeField] BanknoteManager banknoteManager;
     private void Awake()
     {
         sbc = GetComponentInParent<StackBodiesController>();
         myCollider = GetComponent<BoxCollider>();
-
+        banknoteManager = FindObjectOfType<BanknoteManager>();
     }
 
     public void DeactiveCollider()
@@ -49,12 +51,14 @@ public class Stack : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag=="Cash" && other.gameObject.GetComponent<Banknote>()!=null)
+        if (other.gameObject.tag=="Cash"&& !banknoteManager.IsBanknoteCollected(other.gameObject.GetComponent<Banknote>()))
         {
-            other.gameObject.GetComponent<Banknote>().CollectTheBanknote(true);
-            other.gameObject.SetActive(false);
-            Destroy(other.gameObject);
+            banknoteManager.CollectedBanknoteList(other.gameObject.GetComponent<Banknote>());
+            //other.gameObject.GetComponent<Banknote>().CollectTheBanknote(true);
+            //other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
             //this.transform.localScale = new Vector3(1, 0.75f, 0.75f);
+            other.gameObject.GetComponent<Banknote>().CollectTheBanknote(true);
             ShrinkColliderSize();
             sbc.ActiveTheStack();
              
