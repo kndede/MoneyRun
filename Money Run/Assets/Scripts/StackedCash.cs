@@ -46,7 +46,7 @@ public class StackedCash : MonoBehaviour
     public void DetachCash()
     {
 
-        dollarBlast.Play();
+        dollarBlast.Emit(20);
         DisableMeshRenderer();
 
         //transform.DOJump(new Vector3(transform.position.x+2f,transform.position.y,transform.position.z+4f),2f,1,2);
@@ -54,7 +54,7 @@ public class StackedCash : MonoBehaviour
     public void DetachCash(Vector2 upperLeftCorner, Vector2 downRightCorner)
     {
 
-        dollarBlast.Play();
+        dollarBlast.Emit(10);
         DisableMeshRenderer();
         float x = upperLeftCorner.x;
         float maxz = upperLeftCorner.y;

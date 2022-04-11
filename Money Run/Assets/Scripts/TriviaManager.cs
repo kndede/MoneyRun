@@ -15,22 +15,26 @@ public class TriviaManager : MonoBehaviour
     public float imageDelay = 0;
     public int _triviaId;
 
-   // public MyMoney myMoney;
+    public Material greenMat;
+    public Material redMat;
 
 
     public int correctAnswerMultiplier = 2;
     private void Start()
     {
         TriviaEndEvents.triviaEndEvents.endTrivia += GetEndscore;
+        correctAnswer.gameObject.GetComponent<Renderer>().material = greenMat;
+        wrongAnswer.gameObject.GetComponent<Renderer>().material = redMat;
     }
 
 
-    // scriptable obje dizaynı public QuestionScriptableObject questionScriptableObject;
 
 
     public void EnablePanels()
     {
-       // questionText.text = questionScriptableObject.question;
+        // questionText.text = questionScriptableObject.question;
+       // correctAnswer.GetComponent<Material>().color = Color.green;
+        //wrongAnswer.GetComponent<Material>().color = Color.red;
         questionText.gameObject.SetActive(true);
         correctAnswer.gameObject.SetActive(true);
         wrongAnswer.gameObject.SetActive(true);

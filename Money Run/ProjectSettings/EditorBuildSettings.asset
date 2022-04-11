@@ -9,12 +9,27 @@ EditorBuildSettings:
     path: Assets/Scenes/LoaderScene.unity
     guid: c7a3b9acb91c09f4ba23796dd93cca9f
   - enabled: 1
-    path: Assets/Scenes/Level0.unity
-    guid: e25df8d95d4ec7f4e9a27c6cca6c57bf
+    path: Assets/Scenes/Prototype Level 1.unity
+    guid: 9b0e26352c4c310489ad1cad58a8eb0f
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: c8b96ec49036f7848adf5aaf3305fd24
+    path: Assets/Scenes/Prototype Level 2.unity
+    guid: a7e750fcca458b04288cc58c9d90755c
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 83b6035b5a297df448d596369e69f04b
+    path: Assets/Scenes/Prototype Level 3.unity
+    guid: f153c6cf1f8364d41b9ebc5ad606f718
+  - enabled: 1
+    path: Assets/Scenes/Prototype Level 4.unity
+    guid: ba1cf0ddee88f2f43ad48157cc5304dc
+  - enabled: 1
+    path: Assets/Scenes/Prototype Level 5.unity
+    guid: 1a6a382bdd0213f4f84477711bbecce8
+  - enabled: 1
+    path: Assets/Scenes/Prototype Level 6.unity
+    guid: bc5ba4b919c379545a7e7398b5015191
+  - enabled: 1
+    path: Assets/Scenes/Prototype Level 7.unity
+    guid: 9b0a72293003aeb46adcb475fe992243
+  - enabled: 1
+    path: Assets/Scenes/Prototype Level 8.unity
+    guid: 6a47dce6ce2d079419f5b9994b0691d9
   m_configObjects: {}

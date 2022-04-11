@@ -109,10 +109,15 @@ public class EndGameEvents : MonoBehaviour
 
         myMoney.DisplayMoney();
     }
+    //bool isFirstLevel = true;
     void LevelManagerWallet()
     {
+        //if (isFirstLevel)
+        //{
 
-        LevelManager.Instance.wallet += myMoney.money;
+            LevelManager.Instance.wallet = myMoney.money;
+            //isFirstLevel = false;
+       // }
     }
     
 }

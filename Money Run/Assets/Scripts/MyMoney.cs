@@ -12,6 +12,11 @@ public class MyMoney : MonoBehaviour
 
     [SerializeField] private DOTweenAnimation cashAnim;
     [SerializeField] private CashAnimUI cashAnimUI;
+
+
+    public int money;
+    public int _triviaId;
+
     private void Awake()
     {
         if (_money==null)
@@ -26,16 +31,14 @@ public class MyMoney : MonoBehaviour
         }
 
         cashCounterText = GetComponent<TextMeshProUGUI>();
-       // dta = GetComponent<DOTweenAnimation>();
     }
     private void Start()
     {
         _triviaId = 0;
+        _money.money=LevelManager.Instance.wallet;
         DisplayMoney(true);
         TriviaEndEvents.triviaEndEvents.endTrivia += DisplayMoney;
     }
-    public int money;
-    public int _triviaId;
     public void DisplayMoney(int triviaId)
     {
         if (triviaId==this._triviaId)
