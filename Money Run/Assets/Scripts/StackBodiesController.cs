@@ -13,7 +13,8 @@ public class StackBodiesController : MonoBehaviour
 
 
     public int stackCount = 0;
-    private void Awake()
+    
+    private void Start()
     {
         stackColliders = GetComponentsInChildren<Stack>();
 
@@ -41,11 +42,11 @@ public class StackBodiesController : MonoBehaviour
             loopCountForCash++;
 
         }
-        
+
 
         Debug.Log("Current stack count is " + (stackCount));
     }
-   
+
 
     void GetNextColliderActive()
     {
