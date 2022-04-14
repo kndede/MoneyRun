@@ -35,6 +35,6 @@ public class LevelManager : MonoBehaviour
         int sceneCount = SceneManager.sceneCountInBuildSettings - 1;
         int loadScene = (level % sceneCount) + 1;
         print(loadScene);
-        SceneManager.LoadScene(loadScene);
+        SceneManager.LoadSceneAsync(loadScene);
     }
 }
