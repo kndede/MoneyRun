@@ -3239,7 +3239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: 'CINCINNATI ...
+      value: 'LOS ANGELES ...
 
         (2022 Super Bowl Winners)'
       objectReference: {fileID: 0}

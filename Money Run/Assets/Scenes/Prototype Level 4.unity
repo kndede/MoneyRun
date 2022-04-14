@@ -2976,15 +2976,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: WILL
+      value: BILLIE
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
-      value: 0.3
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.3
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 4292255907024776561, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: sbc
@@ -3004,7 +3004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: CHRIS
+      value: JANE
       objectReference: {fileID: 0}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
@@ -3104,9 +3104,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: '... Smith
+      value: '... EILISH
 
-        (Oscar Winning Actor)'
+        (American Singer Songwriter)'
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
@@ -8080,7 +8080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: NEW
+      value: DARK
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
@@ -8100,7 +8100,7 @@ PrefabInstance:
       objectReference: {fileID: 1585242324}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: SUPER
+      value: ELDEN
       objectReference: {fileID: 0}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
@@ -8188,13 +8188,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: '... MARIO
+      value: '... RING
 
-        (2D Platform Game)'
+        (Action Role-Playing Game)'
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 68.4
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_enableAutoSizing

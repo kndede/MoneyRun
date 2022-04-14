@@ -8210,15 +8210,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: BILLIE
+      value: PINK
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4144295059606921830, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4292255907024776561, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: sbc
@@ -8230,15 +8230,15 @@ PrefabInstance:
       objectReference: {fileID: 1585242324}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: JANE
+      value: BLUE
       objectReference: {fileID: 0}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7081413525857790764, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7702876006474662880, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_Name
@@ -8326,9 +8326,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_text
-      value: '... EILISH
+      value: '... FLOYD
 
-        (American Singer Songwriter)'
+        (British Rock Band)'
       objectReference: {fileID: 0}
     - target: {fileID: 7702876007258696929, guid: 905594efd0202024aa7447082d272dbb, type: 3}
       propertyPath: m_fontSize
